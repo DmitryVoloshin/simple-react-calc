@@ -2,7 +2,8 @@ import React from 'react';
 
 import './Buttons.css'
 
-const Buttons = (  {content,color,onButtonClick}  ) =>{
+const Buttons = (  {content,onButtonClick}  ) =>{
+
 
 
     //checking Zero
@@ -11,11 +12,13 @@ const Buttons = (  {content,color,onButtonClick}  ) =>{
         onClick={onButtonClick(content)}
         >{content}</button>
     //Checking Color
-    }else if(color == "orange"){
+    }else if(content == "+/−" || content == "AC" || content == "%"){
         return <button className="Main-calc_button orange"
         onClick={onButtonClick(content)}
         >{content}</button>
-    }else if(color == "gray"){
+    }else if(content == "÷" || content == "m+" || content == "×" ||
+             content == "−" || content == "+"  || content == "="
+        ){
         return <button className="Main-calc_button gray"
         onClick={onButtonClick(content)}
         >{content}</button>

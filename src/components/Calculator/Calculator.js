@@ -160,15 +160,20 @@ const Calculator = (  ) =>{
         }
     };
 
-
+    const symb = ['+/−','AC','%','÷','mc','mr',
+    'm-','m+','7','8','9','×','4','5','6','−','1',
+    '2','3','+','0','.','=']
     return(
         <div className="Calc-main_disp">
-            
             <div className="Calc-disp_result">{result}</div>
-
             <div className="Calc-disp_buttons">
-         
-                <Buttons onButtonClick={onButtonPress} content="+/−"color="gray"/>
+            {
+                symb.map((content) =>{
+                    return <Buttons onButtonClick={onButtonPress}
+                    content={content}></Buttons>
+                })
+            }
+                {/* <Buttons onButtonClick={onButtonPress} content="+/−"color="gray"/>
                 <Buttons onButtonClick={onButtonPress} content="AC" color="gray"/>
                 <Buttons onButtonClick={onButtonPress} content="%" color="gray"/>
                 <Buttons onButtonClick={onButtonPress} content="÷" color="orange"/>
@@ -195,9 +200,8 @@ const Calculator = (  ) =>{
 
                 <Buttons onButtonClick={onButtonPress} content="0"/>
                 <Buttons onButtonClick={onButtonPress} content="."/>
-                <Buttons onButtonClick={onButtonPress} content="=" color="orange"/>
+                <Buttons onButtonClick={onButtonPress} content="=" color="orange"/> */}
             </div>
-
             <div className="Calc-bottom_dash"></div>
         </div>
     )
