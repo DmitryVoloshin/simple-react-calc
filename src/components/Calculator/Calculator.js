@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Buttons from '../Buttons';
 
 import './Calculator.css'
 
 
 const Calculator = ( ) =>{
+
+    const [result,setResult] = useState('0')
+
+
+
     return(
         <div className="Calc-main_disp">
             
-            <div className="Calc-disp_result">0</div>
+            <div className="Calc-disp_result">{result}</div>
 
             <div className="Calc-disp_buttons">
             
