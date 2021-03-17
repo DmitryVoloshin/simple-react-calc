@@ -171,8 +171,9 @@ const Calculator = (  ) =>{
             <div className="Calc-disp_result">{result}</div>
             <div className="Calc-disp_buttons">
             {
-                calcButtonSymbols.map((content) =>{
+                calcButtonSymbols.map((content,index) =>{
                     return <Buttons onButtonClick={onButtonPress}
+                    key={index}
                     content={content}></Buttons>
                 })
             }
