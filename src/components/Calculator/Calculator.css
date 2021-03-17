@@ -1,9 +1,19 @@
 .Calc-main_disp{
-
+    width: 32vh;
+    height: 54vh;
+    background: black;
+    color: white;
+    padding: 25px;
 }
 .Calc-disp_result{
-
+    margin-top: 75px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-size: 55px;
 }
 .Calc-disp_buttons{
-    
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows:repeat(6,1fr) ;
+    grid-template-columns: repeat(4,1fr);
 }
