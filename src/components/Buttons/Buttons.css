@@ -1,0 +1,10 @@
+.Main-calc_button{
+    background: rgb(136, 136, 136);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    color: white;
+    font-size: 25px;
+}

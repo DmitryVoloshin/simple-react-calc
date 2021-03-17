@@ -1,4 +1,5 @@
 import React from 'react';
+import Buttons from '../Buttons';
 
 import './Calculator.css'
 
@@ -10,7 +11,8 @@ const Calculator = ( ) =>{
             <div className="Calc-disp_result">0</div>
 
             <div className="Calc-disp_buttons">
-                <button>1</button>
+            
+                <Buttons content="AC"/>
             </div>
         </div>
     )
