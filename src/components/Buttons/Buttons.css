@@ -1,5 +1,5 @@
 .Main-calc_button{
-    background: rgb(136, 136, 136);
+    background: rgb(54, 54, 54);
     width: 60px;
     height: 60px;
     border: none;
@@ -7,4 +7,14 @@
     outline: none;
     color: white;
     font-size: 25px;
+}
+.zero{
+    width: 140px;
+    grid-column: 1 / span 2;
+}
+.orange{
+    background: rgb(255, 184, 77);
+}
+.gray{
+    background: rgb(130, 131, 131);
 }

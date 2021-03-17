@@ -1,6 +1,6 @@
 .Calc-main_disp{
     width: 32vh;
-    height: 54vh;
+    height: 64vh;
     background: black;
     color: white;
     padding: 25px;
@@ -13,7 +13,7 @@
 }
 .Calc-disp_buttons{
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 7px;
     grid-template-rows:repeat(6,1fr) ;
     grid-template-columns: repeat(4,1fr);
 }
