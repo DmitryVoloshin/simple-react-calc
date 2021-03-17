@@ -61,6 +61,12 @@ const Calculator = ( ) =>{
 
             if(operator == "+"){
                 setResult((store + parseFloat(result)).toString())
+            }else if(operator == "-"){
+                setResult((store - parseFloat(result)).toString())
+            }else if(operator == "÷"){
+                setResult((store / parseFloat(result)).toString())
+            }else if(operator == "×"){
+                setResult((store * parseFloat(result)).toString())
             }
             setStore(null);
             setOperator(null)

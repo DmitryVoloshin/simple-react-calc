@@ -4,15 +4,6 @@ import './Buttons.css'
 
 const Buttons = (  {content,color,onButtonClick}  ) =>{
 
-    //This example was made for clarity, it is advised to use the shorter version:
-    //    <button
-    //     className={`Main-calc_button${content == "0" ? "zero" : ""}${type || ""}`}
-    //      onClick=onButtonClick(content)}
-    //    >
-
-
-
-
 
     //checking Zero
     if(content == "0"){
