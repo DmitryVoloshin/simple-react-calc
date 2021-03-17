@@ -14,10 +14,8 @@ const Calculator = (  ) =>{
 
     const onButtonPress = (content) => ()=>{
         const num = parseFloat(result);
-
-        if( content === "mc"){
-            console.log('memory saved')
-        }
+    
+        // Simple Operation
         if (content === "AC") {
             setResult("0");
             setStore(null);
@@ -36,7 +34,25 @@ const Calculator = (  ) =>{
           setOperator(null);
           return;
         }
+
+        //Operation with memory
+        if( content === "mc"){
+            setMemory(num)
+        }
+        if(content === "mr"){
+          return setResult(memory)
+        }
+        if(content === "m-"){
+         return setResult(memory - num)
+        }
+        if(content === "m+"){
+            console.log("HOA +15")
+            return setResult(memory + num)
+        }
+
     
+    
+        // Math Operations
         if (content === ".") {
           if (result.includes(".")) return;
     
@@ -135,10 +151,12 @@ const Calculator = (  ) =>{
           return;
         }
     
+     
+
         if (result[result.length - 1] === ".") {
-        setResult(result + content);
+            setResult(result + content);
         } else {
-        setResult(parseFloat(num + content).toString());
+            setResult(parseFloat(num + content).toString());
         }
     };
 
@@ -176,11 +194,11 @@ const Calculator = (  ) =>{
                 <Buttons onButtonClick={onButtonPress} content="+" color="orange"/>
 
                 <Buttons onButtonClick={onButtonPress} content="0"/>
-                <Buttons onButtonClick={onButtonPress} content=","/>
+                <Buttons onButtonClick={onButtonPress} content="."/>
                 <Buttons onButtonClick={onButtonPress} content="=" color="orange"/>
             </div>
 
-            <div>slash here</div>
+            <div className="Calc-bottom_dash"></div>
         </div>
     )
 }
