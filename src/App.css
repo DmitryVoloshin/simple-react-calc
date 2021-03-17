@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -35,11 +35,11 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
-.buttons{
+/* .buttons{
   display: grid;
   grid-gap: 10px;
   grid-template-rows: repeat(5,1fr);
   grid-template-columns: repeat(4,1fr);
-}
+} */
