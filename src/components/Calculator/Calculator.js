@@ -7,11 +7,75 @@ import './Calculator.css'
 const Calculator = ( ) =>{
 
     const [result,setResult] = useState('0')
+    const [store,setStore] = useState(null)
+    const [operator,setOperator] = useState(null)
 
     const onButtonPress = (content) => ()=>{
+        const numb = parseFloat(result)
 
-        setResult((parseFloat(result)+ content).toString())
-    }
+        if(content == "AC"){
+            setResult('0');
+            setStore(null);
+            setOperator(null)
+            return;
+        }
+        if(content == "+/−"){
+            setResult(( numb * -1).toString());
+            return;
+        }
+        if( content == "%"){
+            setResult((numb / 100).toString());
+            setStore(null);
+            setOperator(null);
+            return;
+        }
+
+       
+        if(content == "+"){
+            setStore(parseFloat(result));
+            setResult('0');
+            setOperator("+")
+            return;
+        }
+        if(content == "-"){
+            setStore(parseFloat(result));
+            setResult('0')
+            setOperator("-")
+            return;
+        }
+        if(content == "÷"){
+            setStore(parseFloat(result));
+            setResult('0')
+            setOperator("÷")
+            return;
+        }
+        if(content == "×"){
+            setStore(parseFloat(result))
+            setResult('0')
+            setOperator("×")
+            return;
+        }
+    
+        if(content == "="){
+            if(!operator) return;
+
+            if(operator == "+"){
+                setResult((store + parseFloat(result)).toString())
+            }
+            setStore(null);
+            setOperator(null)
+            return
+        }
+        
+
+
+        
+
+
+
+        setResult((parseFloat(numb + content)).toString());
+
+    };
 
 
     return(
