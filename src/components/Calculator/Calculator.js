@@ -8,6 +8,10 @@ const Calculator = ( ) =>{
 
     const [result,setResult] = useState('0')
 
+    const onButtonPress = (content) => ()=>{
+
+        setResult((parseFloat(result)+ content).toString())
+    }
 
 
     return(
@@ -16,35 +20,35 @@ const Calculator = ( ) =>{
             <div className="Calc-disp_result">{result}</div>
 
             <div className="Calc-disp_buttons">
-            
-                <Buttons content="AC" color="gray"/>
-                <Buttons content="+/−"color="gray"/>
-                <Buttons content="%" color="gray"/>
-                <Buttons content="÷" color="orange"/>
+         
+                <Buttons onButtonClick={onButtonPress} content="+/−"color="gray"/>
+                <Buttons onButtonClick={onButtonPress} content="AC" color="gray"/>
+                <Buttons onButtonClick={onButtonPress} content="%" color="gray"/>
+                <Buttons onButtonClick={onButtonPress} content="÷" color="orange"/>
 
-                <Buttons content="mc"/>
-                <Buttons content="mr"/>
-                <Buttons content="m-"/>
-                <Buttons content="m+" color="orange"/>
+                <Buttons onButtonClick={onButtonPress} content="mc"/>
+                <Buttons onButtonClick={onButtonPress} content="mr"/>
+                <Buttons onButtonClick={onButtonPress} content="m-"/>
+                <Buttons onButtonClick={onButtonPress} content="m+" color="orange"/>
 
-                <Buttons content="7"/>
-                <Buttons content="8"/>
-                <Buttons content="9"/>
-                <Buttons content="×" color="orange"/>
+                <Buttons onButtonClick={onButtonPress} content="7"/>
+                <Buttons onButtonClick={onButtonPress} content="8"/>
+                <Buttons onButtonClick={onButtonPress} content="9"/>
+                <Buttons onButtonClick={onButtonPress} content="×" color="orange"/>
 
-                <Buttons content="4"/>
-                <Buttons content="5"/>
-                <Buttons content="6"/>
-                <Buttons content="-" color="orange"/>
+                <Buttons onButtonClick={onButtonPress} content="4"/>
+                <Buttons onButtonClick={onButtonPress} content="5"/>
+                <Buttons onButtonClick={onButtonPress} content="6"/>
+                <Buttons onButtonClick={onButtonPress} content="-" color="orange"/>
 
-                <Buttons content="1"/>
-                <Buttons content="2"/>
-                <Buttons content="3"/>
-                <Buttons content="+" color="orange"/>
+                <Buttons onButtonClick={onButtonPress} content="1"/>
+                <Buttons onButtonClick={onButtonPress} content="2"/>
+                <Buttons onButtonClick={onButtonPress} content="3"/>
+                <Buttons onButtonClick={onButtonPress} content="+" color="orange"/>
 
-                <Buttons content="0"/>
-                <Buttons content=","/>
-                <Buttons content="=" color="orange"/>
+                <Buttons onButtonClick={onButtonPress} content="0"/>
+                <Buttons onButtonClick={onButtonPress} content=","/>
+                <Buttons onButtonClick={onButtonPress} content="=" color="orange"/>
             </div>
 
             <div>slash here</div>
