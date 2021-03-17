@@ -160,47 +160,23 @@ const Calculator = (  ) =>{
         }
     };
 
-    const symb = ['+/−','AC','%','÷','mc','mr',
-    'm-','m+','7','8','9','×','4','5','6','−','1',
-    '2','3','+','0','.','=']
+    const calcButtonSymbols = ['+/−','AC','%','÷','mc','mr',
+                 'm-','m+','7','8','9','×','4',
+                  '5','6','−','1','2','3','+','0',
+                  '.','='];
     return(
+
+
         <div className="Calc-main_disp">
             <div className="Calc-disp_result">{result}</div>
             <div className="Calc-disp_buttons">
             {
-                symb.map((content) =>{
+                calcButtonSymbols.map((content) =>{
                     return <Buttons onButtonClick={onButtonPress}
                     content={content}></Buttons>
                 })
             }
-                {/* <Buttons onButtonClick={onButtonPress} content="+/−"color="gray"/>
-                <Buttons onButtonClick={onButtonPress} content="AC" color="gray"/>
-                <Buttons onButtonClick={onButtonPress} content="%" color="gray"/>
-                <Buttons onButtonClick={onButtonPress} content="÷" color="orange"/>
 
-                <Buttons onButtonClick={onButtonPress} content="mc"/>
-                <Buttons onButtonClick={onButtonPress} content="mr"/>
-                <Buttons onButtonClick={onButtonPress} content="m-"/>
-                <Buttons onButtonClick={onButtonPress} content="m+" color="orange"/>
-
-                <Buttons onButtonClick={onButtonPress} content="7"/>
-                <Buttons onButtonClick={onButtonPress} content="8"/>
-                <Buttons onButtonClick={onButtonPress} content="9"/>
-                <Buttons onButtonClick={onButtonPress} content="×" color="orange"/>
-
-                <Buttons onButtonClick={onButtonPress} content="4"/>
-                <Buttons onButtonClick={onButtonPress} content="5"/>
-                <Buttons onButtonClick={onButtonPress} content="6"/>
-                <Buttons onButtonClick={onButtonPress} content="−" color="orange"/>
-
-                <Buttons onButtonClick={onButtonPress} content="1"/>
-                <Buttons onButtonClick={onButtonPress} content="2"/>
-                <Buttons onButtonClick={onButtonPress} content="3"/>
-                <Buttons onButtonClick={onButtonPress} content="+" color="orange"/>
-
-                <Buttons onButtonClick={onButtonPress} content="0"/>
-                <Buttons onButtonClick={onButtonPress} content="."/>
-                <Buttons onButtonClick={onButtonPress} content="=" color="orange"/> */}
             </div>
             <div className="Calc-bottom_dash"></div>
         </div>

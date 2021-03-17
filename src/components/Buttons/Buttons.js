@@ -4,8 +4,6 @@ import './Buttons.css'
 
 const Buttons = (  {content,onButtonClick}  ) =>{
 
-
-
     //checking Zero
     if(content == "0"){
         return <button className="Main-calc_button zero"
