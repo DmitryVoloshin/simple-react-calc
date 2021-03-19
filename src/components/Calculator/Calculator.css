@@ -6,6 +6,8 @@
     padding: 25px;
 }
 .Calc-disp_result{
+    display: block;
+    overflow: hidden;
     margin-top: 75px;
     margin-bottom: 15px;
     text-align: right;

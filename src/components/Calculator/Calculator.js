@@ -169,7 +169,7 @@ const Calculator = (  ) =>{
 
 
         <div className="Calc-main_disp">
-            <div className="Calc-disp_result">{result}</div>
+            <p className="Calc-disp_result">{result}</p>
             <div className="Calc-disp_buttons">
             {
                 calcButtonSymbols.map((content,index) =>{
