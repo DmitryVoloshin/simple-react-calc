@@ -43,7 +43,8 @@ const Calculator = (  ) =>{
           return setResult(memory)
         }
         if(content === "m-"){
-         return setResult(memory - num)
+         return setResult(num - memory)
+         
         }
         if(content === "m+"){
             console.log("HOA +15")
